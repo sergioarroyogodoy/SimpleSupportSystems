@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SimpleSupportSystems — Managed Support for SaaS Founders</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;
+  --bg2:#f9f9f8;
+  --bg3:#f3f3f1;
+  --surface:#ffffff;
+  --border:rgba(0,0,0,.08);
+  --border2:rgba(0,0,0,.13);
+  --orange:#F97316;
+  --orange-dim:#fff4ed;
+  --orange-mid:rgba(249,115,22,.2);
+  --orange-dark:#c2580a;
+  --ink:#0f0f0f;
+  --ink2:#2a2a2a;
+  --ink3:#6b6b6b;
+  --ink4:#9a9a9a;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  --radius:12px;
+  --radius-lg:18px;
+  --shadow:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.05);
+  --shadow-lg:0 4px 24px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.06);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 5vw;transition:all .3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
+.nav-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.nav-logo span{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--ink3);text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--orange);color:#fff;font-size:13px;font-weight:700;padding:9px 20px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;transition:all .2s;letter-spacing:-.01em}
+.nav-cta:hover{background:var(--orange-dark);box-shadow:0 4px 16px rgba(249,115,22,.3);transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding:130px 5vw 80px;position:relative;overflow:hidden;background:var(--bg)}
+.hero-glow{position:absolute;top:-120px;right:-100px;width:700px;height:700px;background:radial-gradient(ellipse,rgba(249,115,22,.07) 0%,transparent 65%);pointer-events:none;animation:glowPulse 6s ease-in-out infinite}
+.hero-glow2{position:absolute;bottom:-80px;left:-80px;width:400px;height:400px;background:radial-gradient(ellipse,rgba(249,115,22,.04) 0%,transparent 65%);pointer-events:none;animation:glowPulse 8s ease-in-out infinite 2s}
+@keyframes glowPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+.hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;position:relative;z-index:1}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--orange-dim);border:1px solid var(--orange-mid);border-radius:100px;padding:5px 14px;font-size:11px;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:24px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);display:block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+h1{font-size:clamp(38px,4.8vw,62px);line-height:1.06;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin-bottom:20px}
+h1 em{font-style:normal;color:var(--orange)}
+.hero-sub{font-size:17px;color:var(--ink3);line-height:1.65;margin-bottom:28px;max-width:500px;font-weight:400}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.btn-primary{background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:14px 26px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:-.01em;position:relative;overflow:hidden}
+.btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.3)}
+.btn-primary:hover::before{left:100%}
+.btn-ghost{font-size:14px;font-weight:500;color:var(--ink3);background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s}
+.btn-ghost:hover{color:var(--ink);transform:translateX(2px)}
+
+.hero-guarantee{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink4);margin-bottom:36px}
+.hero-guarantee a{color:var(--orange);text-decoration:none;font-weight:500;transition:all .15s}
+.hero-guarantee a:hover{text-decoration:underline;color:var(--orange-dark)}
+
+.hero-trust{padding-top:24px;border-top:1px solid var(--border);display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink3);font-weight:500;transition:all .2s}
+.trust-item:hover{color:var(--ink2)}
+.trust-check{width:18px;height:18px;border-radius:50%;background:var(--orange-dim);border:1px solid var(--orange-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;color:var(--orange);font-weight:800;transition:all .2s}
+.trust-item:hover .trust-check{transform:scale(1.1);background:var(--orange);color:#fff}
+
+/* HERO CARD - Restructured: outcome first */
+.hero-card{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;transition:all .3s}
+.hero-card:hover{box-shadow:0 8px 40px rgba(0,0,0,.12);transform:translateY(-4px)}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),#fb923c)}
+.card-outcome-header{font-size:18px;color:var(--ink);line-height:1.45;font-weight:600;font-style:italic;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border);position:relative}
+.card-outcome-header::before{content:'"';position:absolute;top:-8px;left:-4px;font-size:48px;color:var(--orange);opacity:.2;font-family:Georgia,serif;font-weight:700}
+.card-label{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--ink4);margin-bottom:18px}
+.week-row{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start;transition:all .2s}
+.week-row:hover{transform:translateX(4px)}
+.week-num{width:32px;height:32px;border-radius:8px;background:var(--orange-dim);border:1px solid var(--orange-mid);color:var(--orange);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all .2s}
+.week-row:hover .week-num{background:var(--orange);color:#fff}
+.week-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
+.week-desc{font-size:12px;color:var(--ink3);line-height:1.55;font-weight:400}
+
+/* STATS / TICKER COMBO */
+.stats-bar{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 5vw}
+.stats-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border)}
+.stat-block{background:var(--bg3);padding:24px 28px;transition:all .25s}
+.stat-block:hover{background:var(--bg)}
+.stat-num{font-size:32px;font-weight:800;letter-spacing:-.04em;color:var(--ink);line-height:1;margin-bottom:5px}
+.stat-num span{color:var(--orange)}
+.stat-label{font-size:13px;color:var(--ink3);font-weight:400;line-height:1.4}
+
+/* TICKER */
+.ticker-wrap{overflow:hidden;background:var(--orange);padding:11px 0;position:relative}
+.ticker-wrap::before,.ticker-wrap::after{content:'';position:absolute;top:0;width:80px;height:100%;z-index:2}
+.ticker-wrap::before{left:0;background:linear-gradient(to right,var(--orange),transparent)}
+.ticker-wrap::after{right:0;background:linear-gradient(to left,var(--orange),transparent)}
+.ticker-track{display:flex;animation:ticker 28s linear infinite;width:max-content}
+.ticker-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap;padding:0 28px;text-transform:uppercase;letter-spacing:.05em}
+.ticker-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.5);flex-shrink:0}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTION COMMONS */
+.section-tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:12px}
+.section-h2{font-size:clamp(26px,3.2vw,42px);font-weight:800;letter-spacing:-.035em;line-height:1.15;color:var(--ink)}
+.section-sub{font-size:16px;color:var(--ink3);line-height:1.65;font-weight:400;margin-top:10px}
+
+/* PROBLEM */
+.problem{background:var(--ink);padding:80px 5vw;border-top:1px solid rgba(0,0,0,.12);position:relative;overflow:hidden}
+.problem::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at top right,rgba(249,115,22,.08) 0%,transparent 50%);pointer-events:none}
+.problem-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.problem .section-tag{color:rgba(249,115,22,.85)}
+.problem .section-h2{color:#fff;margin-bottom:48px;max-width:640px}
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.prob-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);padding:30px;transition:all .3s}
+.prob-card:hover{border-color:rgba(249,115,22,.4);transform:translateY(-6px);background:rgba(255,255,255,.06)}
+.prob-num{font-size:36px;font-weight:800;color:rgba(249,115,22,.35);letter-spacing:-.04em;line-height:1;margin-bottom:14px;transition:all .3s}
+.prob-card:hover .prob-num{color:rgba(249,115,22,.6)}
+.prob-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-.02em}
+.prob-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.65}
+
+/* HOW IT WORKS */
+.how{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
+.how-inner{max-width:1120px;margin:0 auto}
+.how .section-h2{max-width:500px;margin-bottom:48px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative}
+.steps::before{content:'';position:absolute;top:22px;left:calc(16.66% + 4px);right:calc(16.66% + 4px);height:1px;background:linear-gradient(90deg,var(--border2),var(--orange),var(--border2))}
+.step-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow);position:relative;transition:all .3s}
+.step-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--border2)}
+.step-num{width:44px;height:44px;border-radius:10px;background:var(--ink);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1;letter-spacing:-.02em;transition:all .3s}
+.step-card:hover .step-num{background:var(--orange);transform:scale(1.05)}
+.step-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-.02em}
+.step-body{font-size:13px;color:var(--ink3);line-height:1.65}
+
+/* INCLUDED */
+.included{padding:80px 5vw;background:var(--bg);border-top:1px solid var(--border)}
+.included-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:start}
+.included .section-h2{margin-bottom:10px}
+.included-sub{font-size:15px;color:var(--ink3);margin-bottom:32px;font-weight:400;line-height:1.65}
+.inc-list{display:flex;flex-direction:column;gap:4px}
+.inc-item{display:flex;gap:14px;padding:14px 16px;border-radius:10px;transition:all .2s;align-items:flex-start;cursor:default}
+.inc-item:hover{background:var(--bg2);transform:translateX(4px)}
+.inc-dot-wrap{width:32px;height:32px;border-radius:8px;background:var(--orange-dim);border:1px solid var(--orange-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;transition:all .2s}
+.inc-dot-wrap::after{content:'→';font-size:12px;color:var(--orange);font-weight:800}
+.inc-item:hover .inc-dot-wrap{background:var(--orange);border-color:var(--orange)}
+.inc-item:hover .inc-dot-wrap::after{color:#fff}
+.inc-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
+.inc-desc{font-size:13px;color:var(--ink3);line-height:1.55;font-weight:400}
+
+/* PRICE CARD */
+.price-card{background:var(--ink);border-radius:var(--radius-lg);padding:40px;color:#fff;position:sticky;top:80px;box-shadow:var(--shadow-lg);overflow:hidden;transition:all .3s}
+.price-card:hover{box-shadow:0 8px 48px rgba(0,0,0,.2)}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),#fb923c)}
+.price-card::after{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(ellipse,rgba(249,115,22,.1) 0%,transparent 60%);pointer-events:none}
+.price-for{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px;position:relative;z-index:1}
+.price-amount{font-size:54px;font-weight:800;letter-spacing:-.05em;color:#fff;line-height:1;margin-bottom:4px;position:relative;z-index:1}
+.price-period{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:14px;position:relative;z-index:1}
+.price-anchor{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:20px;position:relative;z-index:1}
+.price-anchor strong{color:rgba(255,255,255,.75);font-weight:600}
+p.price-note-plain{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;position:relative;z-index:1}
+.price-divider{border:none;border-top:1px solid rgba(255,255,255,.08);margin:20px 0}
+.price-line{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;position:relative;z-index:1}
+.price-line::before{content:'→';color:var(--orange);flex-shrink:0;font-size:12px;margin-top:2px;font-weight:700}
+.price-cta{display:block;background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:15px;border-radius:10px;text-align:center;margin-top:24px;text-decoration:none;transition:all .25s;border:none;cursor:pointer;width:100%;letter-spacing:-.01em;position:relative;z-index:1;overflow:hidden}
+.price-cta::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
+.price-cta:hover{background:var(--orange-dark);box-shadow:0 8px 24px rgba(249,115,22,.4);transform:translateY(-2px)}
+.price-cta:hover::before{left:100%}
+.price-note{font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;position:relative;z-index:1}
+
+/* GUARANTEE */
+.guarantee{padding:80px 5vw;background:var(--orange-dim);border-top:1px solid rgba(249,115,22,.15);border-bottom:1px solid rgba(249,115,22,.15);position:relative;overflow:hidden}
+.guarantee::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(249,115,22,.15) 0%,transparent 60%);pointer-events:none}
+.guarantee-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.g-icon{width:56px;height:56px;border-radius:50%;background:var(--orange);margin:0 auto 24px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(249,115,22,.35);animation:iconFloat 3s ease-in-out infinite}
+@keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.g-icon::after{content:'✓';color:#fff;font-size:22px;font-weight:800}
+.guarantee .section-h2{margin-bottom:14px}
+.guarantee p{font-size:16px;color:var(--ink3);line-height:1.75;font-weight:400}
+
+/* WHO */
+.who{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
+.who-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.who .section-h2{margin-bottom:20px}
+.who-p{font-size:15px;color:var(--ink3);line-height:1.75;margin-bottom:14px;font-weight:400}
+.fit-group-label{font-size:11px;font-weight:700;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;margin-top:20px}
+.fit-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fit-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink2);line-height:1.5;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-weight:400;transition:all .2s}
+.fit-item:hover{transform:translateX(4px);border-color:var(--border2)}
+.fit-mark{width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:10px;font-weight:800;transition:all .2s}
+.fit-yes{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:#16a34a}
+.fit-no{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.18);color:#dc2626}
+.fit-item:hover .fit-yes{background:rgba(34,197,94,.2)}
+.fit-item:hover .fit-no{background:rgba(239,68,68,.15)}
+
+/* AUDIT CTA */
+.audit{padding:90px 5vw;background:var(--bg);border-top:1px solid var(--border);position:relative;overflow:hidden}
+.audit::before{content:'';position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(249,115,22,.06) 0%,transparent 60%);pointer-events:none}
+.audit-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.audit .section-h2{margin-bottom:14px}
+.audit-sub{font-size:16px;color:var(--ink3);line-height:1.65;margin-bottom:36px}
+.audit-what{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;text-align:left;margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.audit-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink2);padding:4px 0;font-weight:500;transition:all .2s}
+.audit-item:hover{transform:translateX(4px)}
+.audit-item::before{content:'→';color:var(--orange);flex-shrink:0;font-size:12px;margin-top:2px;font-weight:800}
+.audit-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;font-size:16px;font-weight:700;padding:16px 38px;border-radius:10px;text-decoration:none;transition:all .25s;border:none;cursor:pointer;letter-spacing:-.01em;position:relative;overflow:hidden}
+.audit-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
+.audit-btn:hover{background:var(--orange-dark);transform:translateY(-2px);box-shadow:0 10px 32px rgba(249,115,22,.3)}
+.audit-btn:hover::before{left:100%}
+.audit-small{font-size:13px;color:var(--ink4);margin-top:14px}
+
+/* FOOTER */
+footer{background:var(--ink);padding:40px 5vw}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-logo{font-size:15px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.footer-logo span{color:var(--orange)}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.35);margin-top:4px}
+.footer-cta-link{color:rgba(249,115,22,.8);font-size:13px;font-weight:600;text-decoration:none;transition:all .15s}
+.footer-cta-link:hover{color:var(--orange)}
+
+/* MOBILE STICKY */
+.sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:12px 16px;z-index:300;box-shadow:0 -4px 24px rgba(0,0,0,.08);transform:translateY(100%);transition:transform .3s}
+.sticky-mobile.visible{transform:translateY(0)}
+.sticky-mobile a{display:block;background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:14px;border-radius:10px;text-align:center;text-decoration:none;letter-spacing:-.01em}
+
+/* SCROLL REVEAL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(30px);transition:all .6s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:fadeUp .5s ease both}
+.hero h1{animation:fadeUp .5s .1s ease both}
+.hero-sub{animation:fadeUp .5s .2s ease both}
+.hero-actions{animation:fadeUp .5s .3s ease both}
+.hero-guarantee{animation:fadeUp .5s .35s ease both}
+.hero-trust{animation:fadeUp .5s .4s ease both}
+.hero-card{animation:fadeUp .6s .2s ease both}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner,.included-inner,.who-inner{grid-template-columns:1fr}
+  .hero-card,.price-card{position:static}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .prob-grid,.steps,.audit-what{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .steps::before{display:none}
+  .sticky-mobile{display:block}
+  body{padding-bottom:72px}
+  h1{font-size:36px}
+  .stats-inner{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <div class="nav-logo">Simple<span>Support</span>Systems</div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#included">What's included</a>
+      <a href="#guarantee">Guarantee</a>
+    </div>
+    <a href="https://calendly.com/simplesupportsystems/audit" class="nav-cta">Book free audit</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Managed support operations</div>
+      <h1>Your inbox, your tickets, your cancellations —<br><em>completely off your plate.</em></h1>
+      <p class="hero-sub">We take over your entire support operation — inbox, cancellations, disputes — so you never touch another ticket again.</p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/simplesupportsystems/audit" class="btn-primary">Get my free support audit →</a>
+        <button class="btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">See how it works ↓</button>
+      </div>
+      <!-- GUARANTEE REFERENCE NEAR CTA -->
+      <div class="hero-guarantee">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L1.5 3.5V7C1.5 10 3.8 12.5 7 13.5C10.2 12.5 12.5 10 12.5 7V3.5L7 1Z" stroke="#F97316" stroke-width="1.2" fill="rgba(249,115,22,.1)"/><path d="M4.5 7L6.2 8.7L9.5 5.5" stroke="#F97316" stroke-width="1.2" stroke-linecap="round"/></svg>
+        Protected by our <a href="#guarantee">Zero-Inbox Guarantee</a> — touch a ticket in 60 days, get a free month.
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="trust-check">✓</div>No hiring. No managing.</div>
+        <div class="trust-item"><div class="trust-check">✓</div>Live in 30 days</div>
+        <div class="trust-item"><div class="trust-check">✓</div>Zero-Inbox Guarantee</div>
+      </div>
+    </div>
+    <!-- HERO CARD - Restructured: outcome quote first -->
+    <div class="hero-card">
+      <div class="card-outcome-header">You open Monday morning and there's nothing waiting for you.</div>
+      <div class="card-label">Here's how we get you there</div>
+      <div class="week-row">
+        <div class="week-num">1</div>
+        <div>
+          <div class="week-title">Audit & diagnosis</div>
+          <div class="week-desc">We map your current setup, ticket volume, and gaps. You get a clear picture of what's broken before we touch anything.</div>
+        </div>
+      </div>
+      <div class="week-row">
+        <div class="week-num">2</div>
+        <div>
+          <div class="week-title">System build</div>
+          <div class="week-desc">Macros, tags, AI triage, save scripts, and helpdesk configuration — built specifically for your product and customers.</div>
+        </div>
+      </div>
+      <div class="week-row">
+        <div class="week-num">3–4</div>
+        <div>
+          <div class="week-title">Handover & go live</div>
+          <div class="week-desc">We take over the queue. You stop touching tickets. The system runs.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Zero-Inbox Guarantee<span class="ticker-dot"></span></span>
+    <span class="ticker-item">No hiring. No managing.<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Live in 30 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Cancellation save flows<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Chargeback defense kit<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Month-to-month after 90 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">AI triage infrastructure<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Monthly ops report<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Zero-Inbox Guarantee<span class="ticker-dot"></span></span>
+    <span class="ticker-item">No hiring. No managing.<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Live in 30 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Cancellation save flows<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Chargeback defense kit<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Month-to-month after 90 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">AI triage infrastructure<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Monthly ops report<span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-block reveal">
+      <div class="stat-num">40k<span>+</span></div>
+      <div class="stat-label">tickets handled per month</div>
+    </div>
+    <div class="stat-block reveal reveal-delay-1">
+      <div class="stat-num">34<span>%</span></div>
+      <div class="stat-label">avg cancellations saved</div>
+    </div>
+    <div class="stat-block reveal reveal-delay-2">
+      <div class="stat-num">8<span> hrs</span></div>
+      <div class="stat-label">avg founder time reclaimed weekly</div>
+    </div>
+    <div class="stat-block reveal reveal-delay-3">
+      <div class="stat-num">30<span> days</span></div>
+      <div class="stat-label">average time to full handover</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="problem-inner">
+    <div class="section-tag">The problem</div>
+    <div class="section-h2 reveal">Support was never meant to be<br>the founder's job. But it always becomes it.</div>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-num">01</div>
+        <div class="prob-title">You're still in the inbox</div>
+        <div class="prob-desc">Whether it's escalations, edge cases, or just covering gaps — support keeps pulling you back in. Every escalation costs you an hour you'll never get back.</div>
+      </div>
+      <div class="prob-card reveal reveal-delay-1">
+        <div class="prob-num">02</div>
+        <div class="prob-title">Cancellations aren't being fought</div>
+        <div class="prob-desc">Most founders have no structured process for cancel intent. Customers request to cancel, someone closes the account, and the revenue just leaves. No save attempt. No pause offer. Nothing.</div>
+      </div>
+      <div class="prob-card reveal reveal-delay-2">
+        <div class="prob-num">03</div>
+        <div class="prob-title">The system was never built</div>
+        <div class="prob-desc">It started as a shared inbox. Then a VA. Then a Notion doc. The queue runs on improvisation, not infrastructure — and it shows every time volume spikes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="section-tag">How it works</div>
+    <div class="section-h2 reveal">From inbox chaos to complete hands-off.</div>
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-title">We audit your setup</div>
+        <div class="step-body">A 30-minute call where we diagnose your current support operation — volume, tools, gaps, and where revenue is slipping through. No pitch, just clarity.</div>
+      </div>
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-num">2</div>
+        <div class="step-title">We build the system</div>
+        <div class="step-body">In the first 30 days, we configure your helpdesk, write your scripts, build your automations, and set up every workflow before going live. You don't lift a finger.</div>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-num">3</div>
+        <div class="step-title">We run it — you don't</div>
+        <div class="step-body">From day 30 forward, our team owns the queue entirely. You get a monthly report. Every ticket, cancellation attempt, and dispute is handled. You stay out completely.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="included" id="included">
+  <div class="included-inner">
+    <div>
+      <div class="section-tag">What's included</div>
+      <div class="section-h2 reveal">Nothing for you to manage. Everything your support operation needs.</div>
+      <p class="included-sub reveal">One flat monthly fee covers the full function — execution, systems, and oversight.</p>
+      <div class="inc-list">
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">Full inbox & ticket ownership</div>
+            <div class="inc-desc">Every inbound channel — email, chat, helpdesk — handled end to end. You are removed from the queue entirely.</div>
+          </div>
+        </div>
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">Cancellation & churn handling</div>
+            <div class="inc-desc">Structured save flows for every cancel attempt. Pause offers, downgrade paths, and win-back sequences built into the process before a single account closes.</div>
+          </div>
+        </div>
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">Dispute & refund management</div>
+            <div class="inc-desc">Chargebacks and refund-risk conversations handled end to end. Documentation, communication, and submission — none of it touches you.</div>
+          </div>
+        </div>
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">AI & automation infrastructure</div>
+            <div class="inc-desc">First-pass AI triage, macro library, tagging system, and helpdesk workflows — built for your product and maintained continuously.</div>
+          </div>
+        </div>
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">Monthly operations report</div>
+            <div class="inc-desc">A clear monthly summary of ticket trends, cancellation attempts handled, disputes filed, and system performance — written for founders, not support managers.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PRICE CARD -->
+    <div class="price-card reveal">
+      <div class="price-for">Starting from</div>
+      <div class="price-amount">$6,500</div>
+      <div class="price-period">per month — all-in</div>
+      <div class="price-anchor">
+        <strong>Less than one part-time support hire</strong> — without the recruiting, onboarding, or management overhead. Clients typically see the cancellation save rate offset the fee within 45–60 days.
+      </div>
+      <p class="price-note-plain">One flat fee. No per-agent seats, no hourly billing, no surprises.</p>
+      <hr class="price-divider">
+      <div class="price-line">30-day system build included</div>
+      <div class="price-line">Cancellation save script library</div>
+      <div class="price-line">Chargeback evidence kit</div>
+      <div class="price-line">Month-to-month after 90 days</div>
+      <div class="price-line">Quarterly prepay option: $6,000/mo</div>
+      <a href="https://calendly.com/simplesupportsystems/audit" class="price-cta">Get my free support audit →</a>
+      <div class="price-note">No commitment required to get started</div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee" id="guarantee">
+  <div class="guarantee-inner">
+    <div class="g-icon"></div>
+    <div class="section-h2 reveal">The Zero-Inbox Guarantee</div>
+    <p class="reveal">If you personally handle even one support ticket in the first 60 days, we'll credit one full month free. No asterisks. We take the inbox. We keep it. That's the only promise that matters.</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who" id="who">
+  <div class="who-inner">
+    <div>
+      <div class="section-tag">Who this is for</div>
+      <div class="section-h2 reveal">Built for SaaS founders at a specific inflection point.</div>
+      <p class="who-p reveal">You've got a product that works, revenue coming in, and a support queue that was never properly solved — just patched. You know it needs to be fixed. You don't want to hire, train, and manage a support team. You want it gone.</p>
+      <p class="who-p reveal">This works best if you're doing $30k–$300k MRR and support is still taking founder time every week.</p>
+    </div>
+    <div>
+      <div class="fit-group-label">This is for you if…</div>
+      <ul class="fit-list">
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're a SaaS founder still personally involved in support</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You have an existing helpdesk or are open to setting one up</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You want the inbox handled — not consulting on how to handle it</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're doing at least $30k MRR and support is a real operational cost</li>
+      </ul>
+      <div class="fit-group-label" style="margin-top:24px">This isn't for you if…</div>
+      <ul class="fit-list">
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You need a one-off support VA, not a managed system</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You want to stay hands-on and just need help with overflow</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You're pre-revenue or in early beta</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT CTA -->
+<section class="audit" id="audit">
+  <div class="audit-inner">
+    <div class="section-tag">Get started</div>
+    <div class="section-h2 reveal">See exactly what's broken in 30 minutes.</div>
+    <p class="audit-sub reveal">A 30-minute call. We look at your setup, tell you exactly what's broken, and what it would take to fix it. No pitch. No pressure. You'll leave with a clear picture of your support operation either way.</p>
+    <div class="audit-what reveal">
+      <div class="audit-item">Your current ticket volume & trends</div>
+      <div class="audit-item">How your cancellation process works (or doesn't)</div>
+      <div class="audit-item">Where your biggest operational gaps are</div>
+      <div class="audit-item">Your dispute & refund exposure</div>
+      <div class="audit-item">What your helpdesk setup is missing</div>
+      <div class="audit-item">Whether we're a fit — honestly</div>
+    </div>
+    <a href="https://calendly.com/simplesupportsystems/audit" class="audit-btn reveal">Book my free audit →</a>
+    <p class="audit-small reveal">30 minutes. No obligation. Available this week.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Simple<span>Support</span>Systems</div>
+      <div class="footer-tagline">Managed support operations for SaaS founders · SimpleSupportSystems.com</div>
+    </div>
+    <a href="https://calendly.com/simplesupportsystems/audit" class="footer-cta-link">Book a free audit →</a>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="sticky-mobile" id="stickyCta">
+  <a href="https://calendly.com/simplesupportsystems/audit">Book my free audit →</a>
+</div>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('mainNav');
+let lastScroll = 0;
+
+// Scroll reveal animation
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Mobile sticky CTA + Nav shadow
+window.addEventListener('scroll', function() {
+  const scrollY = window.scrollY;
+  
+  // Mobile sticky
+  const stickyCta = document.getElementById('stickyCta');
+  if (scrollY > 400) {
+    stickyCta.classList.add('visible');
+  } else {
+    stickyCta.classList.remove('visible');
+  }
+  
+  // Nav shadow
+  if (scrollY > 20) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  
+  lastScroll = scrollY;
+}, { passive: true });
+
+// Smooth hover interactions for cards
+document.querySelectorAll('.prob-card, .step-card, .inc-item').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+  });
+});
+</script>
+
+</body>
+</html>
