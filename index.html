@@ -188,9 +188,9 @@ p.price-note-plain{font-size:15px;color:rgba(255,255,255,.6);line-height:1.65;po
 /* Q&A SECTION */
 .intel{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
 .intel-inner{max-width:1120px;margin:0 auto}
-.intel .section-h2{margin-bottom:12px}
+.intel .section-h2{margin-bottom:12px;font-size:clamp(20px,2vw,28px)}
 .intel-sub{font-size:16px;color:var(--ink3);line-height:1.7;margin-bottom:48px;max-width:600px}
-.intel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.intel-grid{display:grid;grid-template-columns:1fr;gap:16px}
 .intel-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px;transition:all .3s}
 .intel-card:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:var(--shadow)}
 .intel-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:-.02em;line-height:1.4}
@@ -200,7 +200,7 @@ p.price-note-plain{font-size:15px;color:rgba(255,255,255,.6);line-height:1.65;po
 /* WHO */
 .who{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
 .who-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-.who .section-h2{margin-bottom:20px}
+.who .section-h2{margin-bottom:20px;font-size:clamp(20px,2vw,28px)}
 .who-p{font-size:16px;color:var(--ink3);line-height:1.8;margin-bottom:14px;font-weight:400}
 .fit-group-label{font-size:11px;font-weight:700;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;margin-top:20px}
 .fit-list{list-style:none;display:flex;flex-direction:column;gap:8px}
@@ -528,12 +528,12 @@ footer{background:var(--ink);padding:40px 5vw}
         <div class="intel-desc">Response times and resolution rates are tracked inside the helpdesk continuously. You'll always know where volume is spiking and which ticket types are taking longest — not because you're watching, but because the data is reported to you.</div>
       </div>
       <div class="intel-card reveal reveal-delay-2">
-        <div class="intel-title">What if your team misses an at-risk account?</div>
-        <div class="intel-desc">Sentiment patterns and at-risk language are flagged before a customer ever clicks cancel. The retention flow triggers early — while there's still time to save the account. Your team isn't reacting to cancellations, they're intercepting them.</div>
+        <div class="intel-title">What if your team misses a cancellation?</div>
+        <div class="intel-desc">Every cancel intent gets a structured save attempt — a pause offer, a downgrade path, or a direct conversation — before the account closes. Nothing slips through because the process doesn't rely on someone noticing. It's built into how every cancellation is handled.</div>
       </div>
       <div class="intel-card reveal reveal-delay-3">
-        <div class="intel-title">How do I know cancellations are actually being fought?</div>
-        <div class="intel-desc">Every cancel intent is documented, worked, and tracked. You'll know exactly how many accounts were saved each month, what offers worked, and where revenue would have walked out the door without intervention. It's all in the report.</div>
+        <div class="intel-title">How do I know the retention process is actually working?</div>
+        <div class="intel-desc">Every save attempt is logged — the reason for cancellation, what was offered, and whether the account was retained. That data accumulates over time so you can see which products, price points, and customer segments are churning most, and why.</div>
       </div>
       <div class="intel-card reveal">
         <div class="intel-title">What if my helpdesk isn't set up properly?</div>
