@@ -54,9 +54,9 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.06)}
 .hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);display:block;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 
-h1{font-size:clamp(38px,4.8vw,62px);line-height:1.06;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin-bottom:20px}
+h1{font-size:clamp(32px,3.8vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.04em;color:var(--ink);margin-bottom:20px}
 h1 em{font-style:normal;color:var(--orange)}
-.hero-sub{font-size:17px;color:var(--ink3);line-height:1.65;margin-bottom:28px;max-width:500px;font-weight:400}
+.hero-sub{font-size:18px;color:var(--ink3);line-height:1.7;margin-bottom:28px;max-width:500px;font-weight:400}
 .hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
 .btn-primary{background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:14px 26px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px;letter-spacing:-.01em;position:relative;overflow:hidden}
 .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
@@ -65,12 +65,12 @@ h1 em{font-style:normal;color:var(--orange)}
 .btn-ghost{font-size:14px;font-weight:500;color:var(--ink3);background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:all .15s}
 .btn-ghost:hover{color:var(--ink);transform:translateX(2px)}
 
-.hero-guarantee{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink4);margin-bottom:36px}
+.hero-guarantee{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink4);margin-bottom:36px}
 .hero-guarantee a{color:var(--orange);text-decoration:none;font-weight:500;transition:all .15s}
 .hero-guarantee a:hover{text-decoration:underline;color:var(--orange-dark)}
 
 .hero-trust{padding-top:24px;border-top:1px solid var(--border);display:flex;gap:28px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--ink3);font-weight:500;transition:all .2s}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink3);font-weight:500;transition:all .2s}
 .trust-item:hover{color:var(--ink2)}
 .trust-check{width:18px;height:18px;border-radius:50%;background:var(--orange-dim);border:1px solid var(--orange-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9px;color:var(--orange);font-weight:800;transition:all .2s}
 .trust-item:hover .trust-check{transform:scale(1.1);background:var(--orange);color:#fff}
@@ -86,8 +86,8 @@ h1 em{font-style:normal;color:var(--orange)}
 .week-row:hover{transform:translateX(4px)}
 .week-num{width:32px;height:32px;border-radius:8px;background:var(--orange-dim);border:1px solid var(--orange-mid);color:var(--orange);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:all .2s}
 .week-row:hover .week-num{background:var(--orange);color:#fff}
-.week-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
-.week-desc{font-size:12px;color:var(--ink3);line-height:1.55;font-weight:400}
+.week-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
+.week-desc{font-size:13px;color:var(--ink3);line-height:1.6;font-weight:400}
 
 /* STATS / TICKER COMBO */
 .stats-bar{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 5vw}
@@ -119,13 +119,13 @@ h1 em{font-style:normal;color:var(--orange)}
 .problem-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
 .problem .section-tag{color:rgba(249,115,22,.85)}
 .problem .section-h2{color:#fff;margin-bottom:48px;max-width:640px}
-.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.prob-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .prob-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);padding:30px;transition:all .3s}
 .prob-card:hover{border-color:rgba(249,115,22,.4);transform:translateY(-6px);background:rgba(255,255,255,.06)}
 .prob-num{font-size:36px;font-weight:800;color:rgba(249,115,22,.35);letter-spacing:-.04em;line-height:1;margin-bottom:14px;transition:all .3s}
 .prob-card:hover .prob-num{color:rgba(249,115,22,.6)}
-.prob-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-.02em}
-.prob-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.65}
+.prob-title{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;letter-spacing:-.02em}
+.prob-desc{font-size:14px;color:rgba(255,255,255,.72);line-height:1.7}
 
 /* HOW IT WORKS */
 .how{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
@@ -137,14 +137,14 @@ h1 em{font-style:normal;color:var(--orange)}
 .step-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--border2)}
 .step-num{width:44px;height:44px;border-radius:10px;background:var(--ink);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:20px;position:relative;z-index:1;letter-spacing:-.02em;transition:all .3s}
 .step-card:hover .step-num{background:var(--orange);transform:scale(1.05)}
-.step-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-.02em}
-.step-body{font-size:13px;color:var(--ink3);line-height:1.65}
+.step-title{font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px;letter-spacing:-.02em}
+.step-body{font-size:14px;color:var(--ink3);line-height:1.7}
 
 /* INCLUDED */
 .included{padding:80px 5vw;background:var(--bg);border-top:1px solid var(--border)}
 .included-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:start}
 .included .section-h2{margin-bottom:10px}
-.included-sub{font-size:15px;color:var(--ink3);margin-bottom:32px;font-weight:400;line-height:1.65}
+.included-sub{font-size:16px;color:var(--ink3);margin-bottom:32px;font-weight:400;line-height:1.7}
 .inc-list{display:flex;flex-direction:column;gap:4px}
 .inc-item{display:flex;gap:14px;padding:14px 16px;border-radius:10px;transition:all .2s;align-items:flex-start;cursor:default}
 .inc-item:hover{background:var(--bg2);transform:translateX(4px)}
@@ -152,28 +152,28 @@ h1 em{font-style:normal;color:var(--orange)}
 .inc-dot-wrap::after{content:'→';font-size:12px;color:var(--orange);font-weight:800}
 .inc-item:hover .inc-dot-wrap{background:var(--orange);border-color:var(--orange)}
 .inc-item:hover .inc-dot-wrap::after{color:#fff}
-.inc-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
-.inc-desc{font-size:13px;color:var(--ink3);line-height:1.55;font-weight:400}
+.inc-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:3px;letter-spacing:-.01em}
+.inc-desc{font-size:14px;color:var(--ink3);line-height:1.65;font-weight:400}
 
 /* PRICE CARD */
 .price-card{background:var(--ink);border-radius:var(--radius-lg);padding:40px;color:#fff;position:sticky;top:80px;box-shadow:var(--shadow-lg);overflow:hidden;transition:all .3s}
 .price-card:hover{box-shadow:0 8px 48px rgba(0,0,0,.2)}
 .price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),#fb923c)}
 .price-card::after{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(ellipse,rgba(249,115,22,.1) 0%,transparent 60%);pointer-events:none}
-.price-for{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:20px;position:relative;z-index:1}
+.price-for{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:20px;position:relative;z-index:1}
 .price-amount{font-size:54px;font-weight:800;letter-spacing:-.05em;color:#fff;line-height:1;margin-bottom:4px;position:relative;z-index:1}
-.price-period{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:14px;position:relative;z-index:1}
-.price-anchor{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:12px 14px;font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:20px;position:relative;z-index:1}
-.price-anchor strong{color:rgba(255,255,255,.75);font-weight:600}
-p.price-note-plain{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;position:relative;z-index:1}
-.price-divider{border:none;border-top:1px solid rgba(255,255,255,.08);margin:20px 0}
-.price-line{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;position:relative;z-index:1}
+.price-period{font-size:15px;color:rgba(255,255,255,.7);margin-bottom:14px;position:relative;z-index:1}
+.price-anchor{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:12px 14px;font-size:13px;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:20px;position:relative;z-index:1}
+.price-anchor strong{color:#fff;font-weight:700}
+p.price-note-plain{font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;position:relative;z-index:1}
+.price-divider{border:none;border-top:1px solid rgba(255,255,255,.12);margin:20px 0}
+.price-line{font-size:14px;color:rgba(255,255,255,.82);margin-bottom:12px;display:flex;gap:10px;align-items:flex-start;position:relative;z-index:1}
 .price-line::before{content:'→';color:var(--orange);flex-shrink:0;font-size:12px;margin-top:2px;font-weight:700}
 .price-cta{display:block;background:var(--orange);color:#fff;font-size:15px;font-weight:700;padding:15px;border-radius:10px;text-align:center;margin-top:24px;text-decoration:none;transition:all .25s;border:none;cursor:pointer;width:100%;letter-spacing:-.01em;position:relative;z-index:1;overflow:hidden}
 .price-cta::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
 .price-cta:hover{background:var(--orange-dark);box-shadow:0 8px 24px rgba(249,115,22,.4);transform:translateY(-2px)}
 .price-cta:hover::before{left:100%}
-.price-note{font-size:12px;color:rgba(255,255,255,.3);text-align:center;margin-top:10px;position:relative;z-index:1}
+.price-note{font-size:13px;color:rgba(255,255,255,.5);text-align:center;margin-top:10px;position:relative;z-index:1}
 
 /* GUARANTEE */
 .guarantee{padding:80px 5vw;background:var(--orange-dim);border-top:1px solid rgba(249,115,22,.15);border-bottom:1px solid rgba(249,115,22,.15);position:relative;overflow:hidden}
@@ -183,13 +183,13 @@ p.price-note-plain{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;pos
 @keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .g-icon::after{content:'✓';color:#fff;font-size:22px;font-weight:800}
 .guarantee .section-h2{margin-bottom:14px}
-.guarantee p{font-size:16px;color:var(--ink3);line-height:1.75;font-weight:400}
+.guarantee p{font-size:17px;color:var(--ink3);line-height:1.8;font-weight:400}
 
 /* WHO */
 .who{padding:80px 5vw;background:var(--bg2);border-top:1px solid var(--border)}
 .who-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .who .section-h2{margin-bottom:20px}
-.who-p{font-size:15px;color:var(--ink3);line-height:1.75;margin-bottom:14px;font-weight:400}
+.who-p{font-size:16px;color:var(--ink3);line-height:1.8;margin-bottom:14px;font-weight:400}
 .fit-group-label{font-size:11px;font-weight:700;color:var(--ink4);letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px;margin-top:20px}
 .fit-list{list-style:none;display:flex;flex-direction:column;gap:8px}
 .fit-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--ink2);line-height:1.5;padding:12px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-weight:400;transition:all .2s}
@@ -205,7 +205,7 @@ p.price-note-plain{font-size:13px;color:rgba(255,255,255,.4);line-height:1.6;pos
 .audit::before{content:'';position:absolute;bottom:-200px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(249,115,22,.06) 0%,transparent 60%);pointer-events:none}
 .audit-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1}
 .audit .section-h2{margin-bottom:14px}
-.audit-sub{font-size:16px;color:var(--ink3);line-height:1.65;margin-bottom:36px}
+.audit-sub{font-size:17px;color:var(--ink3);line-height:1.7;margin-bottom:36px}
 .audit-what{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 32px;text-align:left;margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .audit-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink2);padding:4px 0;font-weight:500;transition:all .2s}
 .audit-item:hover{transform:translateX(4px)}
@@ -285,47 +285,42 @@ footer{background:var(--ink);padding:40px 5vw}
   <div class="hero-glow2"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">Managed support operations</div>
-      <h1>We'll cut your support involvement <br><em>by 75% in 30 days.</em></h1>
-      <p class="hero-sub">Five systems built, AI live, a dedicated team running your queue — so you're only ever involved in support when it genuinely needs you.</p>
+      <div class="hero-badge">Managed support operations for SaaS founders</div>
+      <h1>We'll cut your time in support<br><em>by 75% — guaranteed.</em></h1>
+      <p class="hero-sub">Month one we build the system. Month two our team runs it. By the end of month two, 75% of the hours you spend in support are back — or you don't pay.</p>
       <div class="hero-actions">
-        <a href="https://calendly.com/simplesupportsystems/30min" class="btn-primary">Get my free support audit →</a>
+        <a href="https://calendly.com/simplesupportsystems/30min" class="btn-primary">See what 75% looks like for me →</a>
         <button class="btn-ghost" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">See how it works ↓</button>
       </div>
-      <!-- GUARANTEE REFERENCE NEAR CTA -->
-      <div class="hero-guarantee">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1L1.5 3.5V7C1.5 10 3.8 12.5 7 13.5C10.2 12.5 12.5 10 12.5 7V3.5L7 1Z" stroke="#F97316" stroke-width="1.2" fill="rgba(249,115,22,.1)"/><path d="M4.5 7L6.2 8.7L9.5 5.5" stroke="#F97316" stroke-width="1.2" stroke-linecap="round"/></svg>
-        Protected by our <a href="#guarantee">75% Guarantee</a> — if we don't deliver by month two, you don't pay.
-      </div>
       <div class="hero-trust">
-        <div class="trust-item"><div class="trust-check">✓</div>No hiring. No managing.</div>
-        <div class="trust-item"><div class="trust-check">✓</div>Five systems built in 30 days</div>
-        <div class="trust-item"><div class="trust-check">✓</div>75% reduction — guaranteed</div>
+        <div class="trust-item"><div class="trust-check">✓</div>No hiring or managing</div>
+        <div class="trust-item"><div class="trust-check">✓</div>Five systems live in month one</div>
+        <div class="trust-item"><div class="trust-check">✓</div>75% reduction — or you don't pay</div>
       </div>
     </div>
     <!-- HERO CARD - Restructured: outcome quote first -->
     <div class="hero-card">
-      <div class="card-outcome-header">By month two, support runs without you — and the numbers prove it.</div>
-      <div class="card-label">Here's how we get you there</div>
+      <div class="card-outcome-header">By month two you're only in support when it genuinely needs you. Never because something slipped through.</div>
+      <div class="card-label">How we get you there</div>
       <div class="week-row">
         <div class="week-num">M1</div>
         <div>
-          <div class="week-title">We build the five systems</div>
-          <div class="week-desc">Helpdesk configured, macros written, AI triage live, retention flows built, escalation protocol defined. We handle live tickets while we build.</div>
+          <div class="week-title">We build — and handle tickets while we do</div>
+          <div class="week-desc">Five systems built from scratch: helpdesk, macro library, AI triage, retention flows, escalation protocol. You step back from day one.</div>
         </div>
       </div>
       <div class="week-row">
         <div class="week-num">M2</div>
         <div>
-          <div class="week-title">Dedicated team takes the queue</div>
-          <div class="week-desc">Our team lead plugs into the built system and owns your full ticket volume. You're only contacted when a decision genuinely needs you.</div>
+          <div class="week-title">Our team owns the queue</div>
+          <div class="week-desc">Plugs into a fully documented system. Handles your full ticket volume. You get a monthly report — not a support queue.</div>
         </div>
       </div>
       <div class="week-row">
-        <div class="week-num">→</div>
+        <div class="week-num">✓</div>
         <div>
           <div class="week-title">75% of your support time — back</div>
-          <div class="week-desc">Measured against your confirmed baseline. Proven in the monthly report. Guaranteed by the end of month two or you don't pay.</div>
+          <div class="week-desc">Measured against the baseline we confirm with you before we start. Proven in writing. Guaranteed or month two is free.</div>
         </div>
       </div>
     </div>
@@ -335,21 +330,21 @@ footer{background:var(--ink);padding:40px 5vw}
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
-    <span class="ticker-item">75% reduction — guaranteed<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Dispute & chargeback management<span class="ticker-dot"></span></span>
     <span class="ticker-item">No hiring. No managing.<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Five systems built in 30 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Five systems. Month one.<span class="ticker-dot"></span></span>
     <span class="ticker-item">Cancellation save flows<span class="ticker-dot"></span></span>
     <span class="ticker-item">Chargeback defense kit<span class="ticker-dot"></span></span>
     <span class="ticker-item">AI triage infrastructure<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Month-to-month after 90 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">75% reduction — guaranteed<span class="ticker-dot"></span></span>
     <span class="ticker-item">Monthly ops report<span class="ticker-dot"></span></span>
-    <span class="ticker-item">75% reduction — guaranteed<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Dispute & chargeback management<span class="ticker-dot"></span></span>
     <span class="ticker-item">No hiring. No managing.<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Five systems built in 30 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">Five systems. Month one.<span class="ticker-dot"></span></span>
     <span class="ticker-item">Cancellation save flows<span class="ticker-dot"></span></span>
     <span class="ticker-item">Chargeback defense kit<span class="ticker-dot"></span></span>
     <span class="ticker-item">AI triage infrastructure<span class="ticker-dot"></span></span>
-    <span class="ticker-item">Month-to-month after 90 days<span class="ticker-dot"></span></span>
+    <span class="ticker-item">75% reduction — guaranteed<span class="ticker-dot"></span></span>
     <span class="ticker-item">Monthly ops report<span class="ticker-dot"></span></span>
   </div>
 </div>
@@ -362,16 +357,16 @@ footer{background:var(--ink);padding:40px 5vw}
       <div class="stat-label">reduction in founder support time — guaranteed</div>
     </div>
     <div class="stat-block reveal reveal-delay-1">
-      <div class="stat-num">34<span>%</span></div>
-      <div class="stat-label">avg cancellations saved with retention flows</div>
+      <div class="stat-num">5<span> systems</span></div>
+      <div class="stat-label">built and live before your team takes the queue</div>
     </div>
     <div class="stat-block reveal reveal-delay-2">
-      <div class="stat-num">5<span></span></div>
-      <div class="stat-label">systems built and live before month two</div>
+      <div class="stat-num">2<span> months</span></div>
+      <div class="stat-label">from baseline confirmed to fully operational</div>
     </div>
     <div class="stat-block reveal reveal-delay-3">
-      <div class="stat-num">30<span> days</span></div>
-      <div class="stat-label">to a fully operational support system</div>
+      <div class="stat-num">12<span>+ hrs</span></div>
+      <div class="stat-label">per week given back to founders on average</div>
     </div>
   </div>
 </div>
@@ -380,22 +375,27 @@ footer{background:var(--ink);padding:40px 5vw}
 <section class="problem" id="problem">
   <div class="problem-inner">
     <div class="section-tag">The problem</div>
-    <div class="section-h2 reveal">Support was never meant to be<br>the founder's job. But it always becomes it.</div>
-    <div class="prob-grid">
+    <div class="section-h2 reveal">Support was never supposed to be<br>a founder problem. But it always is.</div>
+    <div class="prob-grid" style="grid-template-columns:repeat(2,1fr)">
       <div class="prob-card reveal">
         <div class="prob-num">01</div>
-        <div class="prob-title">You're still in the inbox</div>
-        <div class="prob-desc">Whether it's escalations, edge cases, or just covering gaps — support keeps pulling you back in. Every escalation costs you an hour you'll never get back.</div>
+        <div class="prob-title">You're still doing tickets</div>
+        <div class="prob-desc">Billing questions. How-to's. Edge cases. Escalations you shouldn't be touching. It starts at an hour a day and compounds — and at $30k–$300k MRR, every hour you spend in the inbox is an hour not spent on growth.</div>
       </div>
       <div class="prob-card reveal reveal-delay-1">
         <div class="prob-num">02</div>
-        <div class="prob-title">Cancellations aren't being fought</div>
-        <div class="prob-desc">Most founders have no structured process for cancel intent. Customers request to cancel, someone closes the account, and the revenue just leaves. No save attempt. No pause offer. Nothing.</div>
+        <div class="prob-title">Cancellations leave without a fight</div>
+        <div class="prob-desc">A customer clicks cancel. Someone closes the account. Revenue leaves. No save attempt, no pause offer, no win-back. There's no system — just a gap where one should be.</div>
       </div>
       <div class="prob-card reveal reveal-delay-2">
         <div class="prob-num">03</div>
-        <div class="prob-title">The system was never built</div>
-        <div class="prob-desc">It started as a shared inbox. Then a VA. Then a Notion doc. The queue runs on improvisation, not infrastructure — and it shows every time volume spikes.</div>
+        <div class="prob-title">It was never properly built</div>
+        <div class="prob-desc">It started as Gmail. Then a shared inbox. Then a VA who didn't work out. You've patched it every time — but nothing has ever been built from scratch to actually run without you.</div>
+      </div>
+      <div class="prob-card reveal reveal-delay-3">
+        <div class="prob-num">04</div>
+        <div class="prob-title">You have no idea what customers are saying</div>
+        <div class="prob-desc">Support is where your product feedback lives — bug patterns, feature gaps, confusion points, churn signals. Without a system tagging and surfacing that data, it disappears into closed tickets and you build blind.</div>
       </div>
     </div>
   </div>
@@ -405,22 +405,22 @@ footer{background:var(--ink);padding:40px 5vw}
 <section class="how" id="how">
   <div class="how-inner">
     <div class="section-tag">How it works</div>
-    <div class="section-h2 reveal">Two months to a support operation that runs without you.</div>
+    <div class="section-h2 reveal">Two months. Five systems. One team. You're out.</div>
     <div class="steps">
       <div class="step-card reveal">
         <div class="step-num">1</div>
-        <div class="step-title">We audit & establish your baseline</div>
-        <div class="step-body">A 30-minute call where we confirm your current ticket volume, time spent in support, and helpdesk setup. That baseline becomes the number your guarantee is built on.</div>
+        <div class="step-title">We confirm your baseline</div>
+        <div class="step-body">A 30-minute call. We ask how many tickets you're handling personally and how long each one takes. That number becomes the baseline your guarantee is built on — and the number we're committed to cutting by 75%.</div>
       </div>
       <div class="step-card reveal reveal-delay-1">
         <div class="step-num">2</div>
-        <div class="step-title">Month one — we build the five systems</div>
-        <div class="step-body">Helpdesk configured, macro library written, AI triage live, cancellation flows built, escalation protocol defined. We handle live tickets while we build — you start stepping back from day one.</div>
+        <div class="step-title">Month one — five systems, live tickets</div>
+        <div class="step-body">We build all five systems while handling your live tickets ourselves. Helpdesk configured, macros written, AI triage live, retention flows built, escalation protocol defined. You start stepping back immediately.</div>
       </div>
       <div class="step-card reveal reveal-delay-2">
         <div class="step-num">3</div>
-        <div class="step-title">Month two — dedicated team takes over</div>
-        <div class="step-body">Our team lead owns the full queue. You're only contacted when a decision genuinely requires the founder — never for a routine ticket. By end of month two, 75% of your support time is back.</div>
+        <div class="step-title">Month two — you're out of the queue</div>
+        <div class="step-body">Our team takes over the full ticket volume. You're only contacted when a decision genuinely requires the founder. By end of month two, 75% of your support time is back — proven in your monthly report.</div>
       </div>
     </div>
   </div>
@@ -432,7 +432,7 @@ footer{background:var(--ink);padding:40px 5vw}
     <div>
       <div class="section-tag">What's included</div>
       <div class="section-h2 reveal">Five systems. One team. Everything your support operation needs.</div>
-      <p class="included-sub reveal">Built in month one. Run from month two. One flat monthly fee covers all of it.</p>
+      <p class="included-sub reveal">Built in month one. Run by your team from month two. One flat monthly fee covers all of it.</p>
       <div class="inc-list">
         <div class="inc-item reveal">
           <div class="inc-dot-wrap"></div>
@@ -445,7 +445,7 @@ footer{background:var(--ink);padding:40px 5vw}
           <div class="inc-dot-wrap"></div>
           <div>
             <div class="inc-title">System 2 — Macro & response library</div>
-            <div class="inc-desc">Your top 20 ticket categories documented with templated responses and resolution paths. Every common ticket answerable by the team without founder input — ever.</div>
+            <div class="inc-desc">Your top 20 ticket categories documented with templated responses and resolution paths. Every routine ticket handled by the team without needing to pull in the founder.</div>
           </div>
         </div>
         <div class="inc-item reveal">
@@ -472,28 +472,34 @@ footer{background:var(--ink);padding:40px 5vw}
         <div class="inc-item reveal">
           <div class="inc-dot-wrap"></div>
           <div>
-            <div class="inc-title">Monthly operations report</div>
-            <div class="inc-desc">Tickets handled, cancellations saved, disputes managed, response times, and your hours-saved calculation — compared to your confirmed baseline every single month.</div>
+            <div class="inc-title">Product feedback loop</div>
+            <div class="inc-desc">Every ticket is tagged by category, topic, and sentiment. Bug patterns, feature requests, and confusion clusters surface automatically — so your product team knows what customers are actually struggling with, not just what made it to a meeting.</div>
+          </div>
+        </div>
+        <div class="inc-item reveal">
+          <div class="inc-dot-wrap"></div>
+          <div>
+            <div class="inc-title">Response time & volume visibility</div>
+            <div class="inc-desc">You'll always know how fast tickets are being resolved, where volume is spiking, and which ticket types are eating the most time. Not because you're watching the queue — because the data comes to you.</div>
           </div>
         </div>
       </div>
     </div>
     <!-- PRICE CARD -->
     <div class="price-card reveal">
-      <div class="price-for">Starting from</div>
+      <div class="price-for">The SaaS Support Pod</div>
       <div class="price-amount">$6,000</div>
-      <div class="price-period">per month — all-in</div>
+      <div class="price-period">per month</div>
       <div class="price-anchor">
-        <strong>Less than one part-time support hire</strong> — without the recruiting, onboarding, or management overhead. The cancellation save rate alone typically offsets the fee within 60 days.
+        <strong>Built around your operation from day one</strong> — a dedicated team, five systems, and AI infrastructure that would take months and multiple hires to replicate on your own.
       </div>
-      <p class="price-note-plain">One flat fee. No per-agent seats, no hourly billing, no surprises.</p>
+      <p class="price-note-plain">One flat fee. No per-ticket pricing, no hourly billing, no surprises.</p>
       <hr class="price-divider">
-      <div class="price-line">Month one: five systems built + live ticket handling</div>
-      <div class="price-line">Month two: dedicated team lead owns the queue</div>
-      <div class="price-line">Additional agents available at $3,000/month</div>
-      <div class="price-line">Month-to-month after 90 days</div>
-      <a href="https://calendly.com/simplesupportsystems/30min" class="price-cta">Get my free support audit →</a>
-      <div class="price-note">No commitment required to get started</div>
+      <div class="price-line">Month one: you're already stepping back</div>
+      <div class="price-line">Month two: your team owns the queue</div>
+      <div class="price-line">75% reduction — guaranteed by end of month two</div>
+      <a href="https://calendly.com/simplesupportsystems/30min" class="price-cta">See what 75% looks like for me →</a>
+      <div class="price-note">30 minutes. No obligation. No pitch.</div>
     </div>
   </div>
 </section>
@@ -503,7 +509,7 @@ footer{background:var(--ink);padding:40px 5vw}
   <div class="guarantee-inner">
     <div class="g-icon"></div>
     <div class="section-h2 reveal">The 75% Guarantee</div>
-    <p class="reveal">We'll reduce your personal support involvement by 75% by the end of month two — five systems built, AI live, a dedicated team running your queue. That 75% is measured against the baseline we confirm with you before we start. It's in the monthly report. It's provable. And if we don't hit it, month two is free.</p>
+    <p class="reveal">We'll reduce your personal support involvement by 75% by the end of month two — five systems built, AI live, a dedicated team running your full queue. Before we start, we confirm your current hours on a call. That number is your baseline. By month two it's down by 75%, tracked inside the helpdesk and verified against what you told us. If we don't hit it, month two is free. No asterisks.</p>
   </div>
 </section>
 
@@ -512,23 +518,24 @@ footer{background:var(--ink);padding:40px 5vw}
   <div class="who-inner">
     <div>
       <div class="section-tag">Who this is for</div>
-      <div class="section-h2 reveal">Built for SaaS founders at a specific inflection point.</div>
-      <p class="who-p reveal">You've got a product that works, revenue coming in, and a support queue that was never properly solved — just patched. You know it needs to be fixed. You don't want to hire, train, and manage a support team. You want it gone.</p>
-      <p class="who-p reveal">This works best if you're doing $30k–$300k MRR and support is still taking founder time every week.</p>
+      <div class="section-h2 reveal">Built for one type of founder at one specific moment.</div>
+      <p class="who-p reveal">Your product works. Revenue is coming in. But support is still sitting on your plate — either because the last hire didn't work out, or because you never properly handed it off. You're not looking for a VA. You're not looking for advice on how to fix it yourself. You want it gone.</p>
+      <p class="who-p reveal">This works best when you're doing $30k–$300k MRR and spending more than two hours a week personally in support. That's the exact problem we're built to solve.</p>
+      <p class="who-p reveal">You're also probably flying blind on product feedback — bugs and feature patterns buried in closed tickets nobody reviews. And when customers complain about slow responses, you feel it even though you're the one who shouldn't be answering in the first place.</p>
     </div>
     <div>
       <div class="fit-group-label">This is for you if…</div>
       <ul class="fit-list">
-        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're a SaaS founder still personally involved in support</li>
-        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You have an existing helpdesk or are open to setting one up</li>
-        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You want the inbox handled — not consulting on how to handle it</li>
-        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're doing at least $30k MRR and support is a real operational cost</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're personally handling support tickets every week</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You want it fully taken over — not just assisted</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You have a helpdesk or are open to setting one up</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-yes">✓</div>You're at $30k+ MRR and support is a real time cost</li>
       </ul>
       <div class="fit-group-label" style="margin-top:24px">This isn't for you if…</div>
       <ul class="fit-list">
-        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You need a one-off support VA, not a managed system</li>
-        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You want to stay hands-on and just need help with overflow</li>
-        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You're pre-revenue or in early beta</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You want to stay hands-on and just need overflow help</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You're looking for a cheap VA, not a managed system</li>
+        <li class="fit-item reveal"><div class="fit-mark fit-no">✕</div>You're pre-revenue or haven't validated the product yet</li>
       </ul>
     </div>
   </div>
@@ -538,18 +545,18 @@ footer{background:var(--ink);padding:40px 5vw}
 <section class="audit" id="audit">
   <div class="audit-inner">
     <div class="section-tag">Get started</div>
-    <div class="section-h2 reveal">Find out exactly how many hours you're losing to support.</div>
-    <p class="audit-sub reveal">A 30-minute call. We look at your current ticket volume, your time in the inbox, and your setup. You leave knowing exactly what 75% looks like for your business — and whether we're the right fit to deliver it.</p>
+    <div class="section-h2 reveal">Find out exactly how many hours you're losing — and what 75% back looks like for you.</div>
+    <p class="audit-sub reveal">A 30-minute call. No pitch. We look at your current setup, confirm your baseline, and tell you exactly what the engagement would look like. You leave with a clear picture of your support operation whether or not we work together.</p>
     <div class="audit-what reveal">
-      <div class="audit-item">Your current ticket volume & time spent</div>
-      <div class="audit-item">How your cancellation process works (or doesn't)</div>
+      <div class="audit-item">How many hours per week you're in support</div>
       <div class="audit-item">Whether your helpdesk can support automation</div>
-      <div class="audit-item">Your dispute & refund exposure</div>
+      <div class="audit-item">How your cancellation process works — or doesn't</div>
+      <div class="audit-item">Your chargeback and dispute exposure</div>
       <div class="audit-item">What your 75% baseline actually looks like</div>
-      <div class="audit-item">Whether we're a fit — honestly</div>
+      <div class="audit-item">Whether we're the right fit — honestly</div>
     </div>
-    <a href="https://calendly.com/simplesupportsystems/30min" class="audit-btn reveal">Book my free audit →</a>
-    <p class="audit-small reveal">30 minutes. No obligation. Available this week.</p>
+    <a href="https://calendly.com/simplesupportsystems/30min" class="audit-btn reveal">See what 75% looks like for me →</a>
+    <p class="audit-small reveal">30 minutes. No obligation. No pitch.</p>
   </div>
 </section>
 
@@ -558,15 +565,15 @@ footer{background:var(--ink);padding:40px 5vw}
   <div class="footer-inner">
     <div>
       <div class="footer-logo">Simple<span>Support</span>Systems</div>
-      <div class="footer-tagline">Managed support operations for SaaS founders · SimpleSupportSystems.com</div>
+      <div class="footer-tagline">Managed support operations for SaaS founders · 75% reduction guaranteed · SimpleSupportSystems.com</div>
     </div>
-    <a href="https://calendly.com/simplesupportsystems/30min" class="footer-cta-link">Book a free audit →</a>
+    <a href="https://calendly.com/simplesupportsystems/30min" class="footer-cta-link">See what 75% looks like for me →</a>
   </div>
 </footer>
 
 <!-- MOBILE STICKY CTA -->
 <div class="sticky-mobile" id="stickyCta">
-  <a href="https://calendly.com/simplesupportsystems/30min">Book my free audit →</a>
+  <a href="https://calendly.com/simplesupportsystems/30min">See what 75% looks like for me →</a>
 </div>
 
 <script>
